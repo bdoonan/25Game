@@ -20,7 +20,10 @@ def main():
         print('You win\n')
     else:
         print ("You lose\n")
-    playAgain = ('Do you want to play again? Y/N\n')
+    playAgain = input('Do you want to play again? Y/N\n')
+    yourScore = 0
+    for i in range(len(scores)):
+        scores[i] = 0
     if playAgain == 'Y':
         main()
 def Shuffle(deck):
