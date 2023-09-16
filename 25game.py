@@ -92,7 +92,7 @@ def Game(listOfHands, trumpCard):
         oppCount = 0
         oppList = [0]*len(listOfHands)
         for i in listOfHands:
-            randint = random.randrange(0,len(listOfHands[1]))
+            randint = random.randrange(0,len(listOfHands[len(listOfHands)-1]))
             Count2 = 0
             for j in i:
                 if j[1] == winningCardSuit and winningCardSuit == trumpCard[1]:
@@ -181,6 +181,9 @@ def Game(listOfHands, trumpCard):
                     winningCard
                 elif i[randint][0] == 'Jack':
                     winningCard=i[randint]
+                elif (i[randint] != winningCard[1]):
+                    winningCard
+                    
             
                 else:
                     if (winningCard[1]=='Spades') or winningCard[1] == 'Clubs':
